@@ -39,7 +39,7 @@
     --color-info: #2470b7;
     --color-white: #ffffff;
     --color-light-gray: #f3f3f3;
-    --color-light-gray2: #FAFCFC;
+    --color-light-gray2: rgba(243, 243, 243, 0.4);
     --color-black: #161616;
     --color-dark: #1e1e1e;
     --color-gray: #676767;
@@ -130,7 +130,7 @@ $spacings: (
 body {
     font-family: var(--font-regular);
     color: var(--color-gray);
-    background-color: #FAFAFA;
+    background-color: rgba(248, 247, 244, 1);
     overflow-x: hidden;
 }
 
@@ -844,7 +844,8 @@ $aspects: (
 /* ==== Tables ==== */
 .table>thead>tr>th,
 .table>thead>tr>td {
-    background-color: #008D5C0D;
+    background-color: rgba(67, 102, 161, 0.05);
+    border: 0.5px solid rgba(229, 229, 229, 1);
     text-align: center;
     font-weight: bold;
     font-size: 12px;
@@ -855,6 +856,7 @@ $aspects: (
     padding: 16px;
     color: var(--color-gray);
     font-size: 12px;
+    border: 0.5px solid rgba(229, 229, 229, 1);
 }
 
 /* ==== Shadows ==== */
@@ -1054,6 +1056,10 @@ footer {
     .modal-md {
         min-width: 565px;
     }
+}
+
+.modal-content {
+    background-color: rgba(248, 247, 244, 1);
 }
 
 /* ====  Menus  ==== */

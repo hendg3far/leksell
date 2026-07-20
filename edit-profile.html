@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--If Rtl add lang="ar" dir="rtl" -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leksell</title>
+
+    <!--If Rtl replace bootstrap.min.css by bootstrap.rtl.min.css-->
+    <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3.8/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3.8/css/bootstrap.rtl.min.css"> -->
+
+    <link rel="stylesheet" href="./assets/vendor/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/vendor/WOW-master/animate.css">
+    <link rel="stylesheet" href="./assets/vendor/slim-select-master/slimselect.css">
+    <link rel="stylesheet" href="./assets/vendor/splide4.1.3/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="./assets/vendor/flatpickr/flatpickr.min.css">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="position-absolute top-0 end-0 d-flex align-items-top justify-content-center z-1 pointer-events-none">
+        <div class="layer-blur opacity-75"></div>
+    </div>
+
+    <section class="top-bar text-white text-sm d-lg-none d-block pt-25">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-4">
+                <div class="d-flex justify-content-center align-items-center gap-3 col">
+                    <div class="d-lg-none d-block">
+                        <a href="./index.html"><img width="150" src="./assets/media/leksell.webp" alt="logo"
+                                loading="lazy"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Menu Desktop-->
+    <nav class="navbar navbar-expand-lg d-lg-block d-none pt-25">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/media/leksell.webp" alt="Shifa Hospital Logo" width="155" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto xl-text-md text-sm gap-15">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Departments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Media Center</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center gap-4 ms-auto">
+                <a href="#" class="btn btn-main btn-1 py-2 px-4"> Book Appointment</a>
+
+                <a href="#" class="btn btn-border-primary py-2 px-4">
+                    <span class="xl-text-md text-sm">Login</span>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!--Menu Mobile-->
+    <nav
+        class="navbar bg-white-color d-lg-none d-block position-fixed bottom-0 start-0 w-100 mobile-menu d-flex justify-content-between">
+        <a href="./index.html"
+            class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
+            <img width="24" height="24" src="./assets/media/icons/mobile/li_home.webp" loading="lazy">
+            <span>Home</span>
+        </a>
+        <a type="button" data-bs-toggle="modal" data-bs-target="#search" aria-controls="modalExample"
+            class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
+            <img width="24" height="24" src="./assets/media/icons/mobile/li_search.webp" loading="lazy">
+            <span>Search</span>
+        </a>
+        <a href="#" class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
+            <img width="24" height="24" src="./assets/media/icons/mobile/first-aid-kit.webp" loading="lazy">
+            <span>Departments</span>
+        </a>
+        <a href="#" class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
+            <img width="24" height="24" src="./assets/media/icons/mobile/li_user.webp" loading="lazy">
+            <span>Profile</span>
+        </a>
+        <a data-bs-toggle="offcanvas" href="#menu" role="button" aria-controls="offcanvasExample"
+            class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
+            <img width="24" height="24" src="./assets/media/icons/mobile/menu-01.webp" loading="lazy">
+            <span>More</span>
+        </a>
+    </nav>
+
+    <!--Menu Offcanvas-->
+    <div class="offcanvas offcanvas-end menu-offcanvas" tabindex="-1" id="menu" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                <img width="120" src="./assets/media/logo.webp" alt="logo" loading="lazy">
+            </h5>
+        </div>
+        <div class="offcanvas-body d-flex flex-column px-0">
+
+            <div class="d-flex flex-column gap-4 px-24">
+
+                <a href="./index.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/home-01.svg" loading="lazy">
+                    <span>Home</span>
+                </a>
+                <a href="./specializations.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/first-aid-kit-01.svg" loading="lazy">
+                    <span>Specializations</span>
+                </a>
+                <a href="./offers.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/sale-tag-02.svg" loading="lazy">
+                    <span>Offers</span>
+                </a>
+                <a href="news.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/news.svg" loading="lazy">
+                    <span>News & Events</span>
+                </a>
+                <a href="./careers.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/briefcase-05.svg" loading="lazy">
+                    <span>People and Culture</span>
+                </a>
+                <a href="#" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/bubble-chat-question.svg" loading="lazy">
+                    <span>FAQs</span>
+                </a>
+                <a href="#" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/covid-info.svg" loading="lazy">
+                    <span>Health and Wellness Resources</span>
+                </a>
+                <a href="./contact.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/call.svg" loading="lazy">
+                    <span>Contact Us</span>
+                </a>
+
+                <a href="#" class="menu-link d-flex align-items-start gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 2V6M6.5 2V6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+                        </path>
+                        <path d="M10 18V14H8.5M13.6297 18L15 14L12 14" stroke="currentColor" stroke-width="1.5"
+                            stroke-linejoin="round"></path>
+                        <path d="M21 4H3V22H21V4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+                        </path>
+                        <path d="M6 9H18" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                    </svg>
+                    <span>Track your Appointment</span>
+                </a>
+            </div>
+
+            <div class="mt-auto">
+                <div class="border-top border-bottom py-24 px-24 mt-24">
+                    <div class="d-flex align-items-center">
+                        <img width="55" height="55" class="object-fit-cover rounded-circle flex-shrink-1"
+                            src="./assets/media/user.png" alt="user image" loading="lazy">
+                        <div class="ms-2">
+                            <h6 class="mb-1">Alaa Mohamed</h6>
+                            <span class="text-sm">alaamohamed32@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-24 px-24">
+                    <div class="d-flex justify-content-between">
+                        <span>Follow Us</span>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-primary-color"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="text-primary-color"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="text-primary-color"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" class="text-primary-color"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Search Modal-->
+    <div class="modal fade" id="search" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-body p-4">
+                    <h4 class="text-dark-color mb-30" id="searchLabel">Search</h4>
+                    <form action="">
+                        <div class="d-flex flex-lg-row flex-column gap-3">
+                            <input class="form-control py-3" type="search" name="search" id="search-input"
+                                autocomplete="off" placeholder="Search Doctors and Specializations ...">
+                            <div class="d-flex justify-content-between gap-2">
+                                <button class="btn btn-main btn-1 rounded-pill py-3 px-4">Search</button>
+                                <a class="btn btn-main btn-3 rounded-pill py-3 px-4" data-bs-dismiss="modal">Clear</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="page-content py-60 position-relative overflow-hidden">
+
+        <div
+            class="position-absolute bottom-0 start-0 d-flex align-items-top justify-content-center z-1 pointer-events-none">
+            <div class="layer-blur opacity-75"></div>
+        </div>
+        <div class="position-absolute bottom-0 end-0 pointer-events-none text-center z-3 mb-60">
+            <img width="417" height="488" src="./assets/media/profile/layer-1.png" alt="layer" loading="lazy"
+                class="wow fadeIn layer-rtl" data-wow-delay="0.2s">
+        </div>
+        <div class="container">
+            <form class="bg-light-gray2-color p-30 rounded-4 wow fadeInUp position-relative z-1"
+                style="--bg-opacity: 0.5">
+
+                <div class="d-flex flex-column gap-32">
+                    <div class="profile-container">
+                        <div class="profile-pic-wrapper">
+                            <img width="185" height="185"
+                                class="border rounded-circle object-fit-cover aspect-square w-auto"
+                                src="./assets/media/profile/avatar.png" alt="patient" loading="lazy" id="profileImg">
+
+
+                            <label for="fileInput" class="edit-icon">
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.2211 1.27883L13.7514 0.748504V0.748504L13.2211 1.27883ZM3.27777 13.7756V14.5256C3.47669 14.5256 3.66745 14.4466 3.8081 14.3059L3.27777 13.7756ZM0.75 13.7756H0C0 14.1898 0.335786 14.5256 0.75 14.5256L0.75 13.7756ZM0.75 11.1965L0.21967 10.6662C0.0790176 10.8068 0 10.9976 0 11.1965H0.75ZM10.6677 1.27883L11.198 1.80916C11.6102 1.39695 12.2786 1.39695 12.6908 1.80916L13.2211 1.27883L13.7514 0.748504C12.7534 -0.249501 11.1353 -0.249501 10.1373 0.748504L10.6677 1.27883ZM13.2211 1.27883L12.6908 1.80916C13.103 2.22138 13.103 2.88972 12.6908 3.30194L13.2211 3.83227L13.7514 4.3626C14.7494 3.3646 14.7494 1.74651 13.7514 0.748504L13.2211 1.27883ZM13.2211 3.83227L12.6908 3.30194L2.74744 13.2453L3.27777 13.7756L3.8081 14.3059L13.7514 4.3626L13.2211 3.83227ZM3.27777 13.7756V13.0256H0.75V13.7756V14.5256H3.27777V13.7756ZM10.6677 1.27883L10.1373 0.748504L0.21967 10.6662L0.75 11.1965L1.28033 11.7268L11.198 1.80916L10.6677 1.27883ZM0.75 11.1965H0V13.7756H0.75H1.5V11.1965H0.75ZM9.58434 2.36217L9.05401 2.8925L11.6074 5.44593L12.1378 4.9156L12.6681 4.38527L10.1147 1.83184L9.58434 2.36217Z"
+                                        fill="#1E1E1E" />
+                                </svg>
+
+                            </label>
+
+                            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="row row-gap-3">
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Full Name</label>
+                                <input type="text" class="form-control py-10" placeholder="Full Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Email Address</label>
+                                <input type="text" class="form-control py-10" placeholder="Email Address">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Phone Number</label>
+                                <input type="text" class="form-control py-10" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Gender</label>
+                                <select class="select form-control py-10" id="gender" name="gender">
+                                    <option value=""> Gender</option>
+                                    <option value=""> Male</option>
+                                    <option value=""> Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column gap-1">
+                                <label for="date">Birth of Date</label>
+                                <div class="position-relative">
+                                    <input type="date" class="form-control py-10 pe-4" name="date" autocomplete="date"
+                                        id="date">
+                                    <div
+                                        class="position-absolute end-0 top-0 h-100 d-flex align-items-center justify-content-center px-3 pointer-events-none">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_889_342)">
+                                                <path d="M12 1.33331V2.66665M4 1.33331V2.66665" stroke="#1E1E1E"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
+                                                <path
+                                                    d="M1.66602 8.16216C1.66602 5.25729 1.66602 3.80486 2.50076 2.90243C3.33551 2 4.67901 2 7.36602 2H8.63268C11.3197 2 12.6632 2 13.4979 2.90243C14.3327 3.80486 14.3327 5.25729 14.3327 8.16216V8.5045C14.3327 11.4094 14.3327 12.8618 13.4979 13.7642C12.6632 14.6667 11.3197 14.6667 8.63268 14.6667H7.36602C4.67901 14.6667 3.33551 14.6667 2.50076 13.7642C1.66602 12.8618 1.66602 11.4094 1.66602 8.5045V8.16216Z"
+                                                    stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M2 5.33331H14" stroke="#1E1E1E" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_889_342">
+                                                    <rect width="16" height="16" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-2 mt-40">
+                        <button type="submit" class="btn btn-main btn-1 rounded-pill py-2 px-4">Save</button>
+                        <button type="button"
+                            class="btn btn-main btn-border-primary rounded-pill py-2 px-4">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-secondary-color text-sm py-30 wow fadeIn position-relative overflow-hidden z-1">
+        <div
+            class="position-absolute top-0 start-0 end-0 mx-auto h-100 d-flex align-items-center justify-content-center z-n1">
+            <div class="layer-blur"></div>
+        </div>
+        <div class="container">
+            <div class="d-flex flex-column gap-48">
+                <div class="d-flex flex-wrap gap-42">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Departments</a>
+                    <a href="#">Media Center</a>
+                </div>
+                <div class="row row-gap-5">
+                    <div class="col-lg-5">
+                        <div class="d-flex flex-column gap-24">
+                            <a href="#"><img width="190" src="./assets/media/leksell-white.webp" alt="leksell logo"
+                                    loading="lazy"></a>
+                            <span class="max-w-300 text-sm">Combining experience, innovation, and patient-focused care
+                                to deliver accurate diagnoses and effective treatments.</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="row row-gap-5">
+                            <div class="col-sm-6">
+                                <div class="d-flex flex-column gap-48">
+                                    <div class="d-flex flex-column gap-8">
+                                        <span class="text-uppercase text-xs opacity-50">Phone Number</span>
+                                        <a href="tel:(+20) 999-99-99" class="hover-opacity-50">(+20) 999-99-99</a>
+                                    </div>
+                                    <div class="d-flex flex-column gap-8">
+                                        <span class="text-uppercase text-xs opacity-50">Email</span>
+                                        <a href="mailto:shifa@gmail.com" class="hover-opacity-50">shifa@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex flex-column gap-8">
+                                    <span class="text-uppercase text-xs opacity-50">Location</span>
+                                    <span>10th of Ramadan City‎‏، ‏‎Al Sharqia Governorate‎‏ ‏‎</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyrights bg-primary-color py-20">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <span>Designed by NetWave</span>
+                <span>Copyright © 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="./assets/vendor/bootstrap-5.3.8/js/bootstrap.bundle.min.js" defer></script>
+    <script src="./assets/vendor/WOW-master/wow.min.js" defer></script>
+    <script src="./assets/vendor/slim-select-master/slimselect.js" defer></script>
+    <script src="./assets/vendor/splide4.1.3/js/splide.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js" defer></script>
+    <script src="./assets/vendor/flatpickr/flatpickr.js" defer></script>
+    <script src="./assets/js/scripts.js" defer></script>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const profileImg = document.getElementById('profileImg');
+
+        fileInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    profileImg.setAttribute('src', e.target.result);
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+
+</html>

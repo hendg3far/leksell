@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<!--If Rtl add lang="ar" dir="rtl" -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leksell</title>
+
+    <!--If Rtl replace bootstrap.min.css by bootstrap.rtl.min.css-->
+    <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3.8/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3.8/css/bootstrap.rtl.min.css"> -->
+
+    <link rel="stylesheet" href="./assets/vendor/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/vendor/WOW-master/animate.css">
+    <link rel="stylesheet" href="./assets/vendor/slim-select-master/slimselect.css">
+    <link rel="stylesheet" href="./assets/vendor/splide4.1.3/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="./assets/vendor/flatpickr/flatpickr.min.css">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="position-absolute top-0 end-0 d-flex align-items-top justify-content-center z-1 pointer-events-none">
+        <div class="layer-blur opacity-75"></div>
+    </div>
+
+    <section class="top-bar text-white text-sm d-lg-none d-block pt-25">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-4">
+                <div class="d-flex justify-content-center align-items-center gap-3 col">
+                    <div class="d-lg-none d-block">
+                        <a href="./index.html"><img width="150" src="./assets/media/leksell.webp" alt="logo"
+                                loading="lazy"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Menu Desktop-->
+    <nav class="navbar navbar-expand-lg d-lg-block d-none pt-25">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/media/leksell.webp" alt="Shifa Hospital Logo" width="155" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto xl-text-md text-sm gap-15">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Departments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Media Center</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center gap-4 ms-auto">
+                <a href="#" class="btn btn-main btn-1 py-2 px-4"> Book Appointment</a>
+
+                <a href="#" class="btn btn-border-primary py-2 px-4">
+                    <span class="xl-text-md text-sm">Login</span>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!--Menu Mobile-->
+    <nav
+        class="navbar bg-white-color d-lg-none d-block position-fixed bottom-0 start-0 w-100 mobile-menu d-flex justify-content-between">
+        <a href="./index.html"
+            class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
+            <img width="24" height="24" src="./assets/media/icons/mobile/li_home.webp" loading="lazy">
+            <span>Home</span>
+        </a>
+        <a type="button" data-bs-toggle="modal" data-bs-target="#search" aria-controls="modalExample"
+            class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
+            <img width="24" height="24" src="./assets/media/icons/mobile/li_search.webp" loading="lazy">
+            <span>Search</span>
+        </a>
+        <a href="#" class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
+            <img width="24" height="24" src="./assets/media/icons/mobile/first-aid-kit.webp" loading="lazy">
+            <span>Departments</span>
+        </a>
+        <a href="#" class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
+            <img width="24" height="24" src="./assets/media/icons/mobile/li_user.webp" loading="lazy">
+            <span>Profile</span>
+        </a>
+        <a data-bs-toggle="offcanvas" href="#menu" role="button" aria-controls="offcanvasExample"
+            class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
+            <img width="24" height="24" src="./assets/media/icons/mobile/menu-01.webp" loading="lazy">
+            <span>More</span>
+        </a>
+    </nav>
+
+    <!--Menu Offcanvas-->
+    <div class="offcanvas offcanvas-end menu-offcanvas" tabindex="-1" id="menu" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                <img width="120" src="./assets/media/logo.webp" alt="logo" loading="lazy">
+            </h5>
+        </div>
+        <div class="offcanvas-body d-flex flex-column px-0">
+
+            <div class="d-flex flex-column gap-4 px-24">
+
+                <a href="./index.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/home-01.svg" loading="lazy">
+                    <span>Home</span>
+                </a>
+                <a href="./specializations.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/first-aid-kit-01.svg" loading="lazy">
+                    <span>Specializations</span>
+                </a>
+                <a href="./offers.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/sale-tag-02.svg" loading="lazy">
+                    <span>Offers</span>
+                </a>
+                <a href="news.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/news.svg" loading="lazy">
+                    <span>News & Events</span>
+                </a>
+                <a href="./careers.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/briefcase-05.svg" loading="lazy">
+                    <span>People and Culture</span>
+                </a>
+                <a href="#" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/bubble-chat-question.svg" loading="lazy">
+                    <span>FAQs</span>
+                </a>
+                <a href="#" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/covid-info.svg" loading="lazy">
+                    <span>Health and Wellness Resources</span>
+                </a>
+                <a href="./contact.html" class="menu-link d-flex align-items-start gap-2">
+                    <img src="./assets/media/icons/mobile/call.svg" loading="lazy">
+                    <span>Contact Us</span>
+                </a>
+
+                <a href="#" class="menu-link d-flex align-items-start gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 2V6M6.5 2V6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+                        </path>
+                        <path d="M10 18V14H8.5M13.6297 18L15 14L12 14" stroke="currentColor" stroke-width="1.5"
+                            stroke-linejoin="round"></path>
+                        <path d="M21 4H3V22H21V4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+                        </path>
+                        <path d="M6 9H18" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                    </svg>
+                    <span>Track your Appointment</span>
+                </a>
+            </div>
+
+            <div class="mt-auto">
+                <div class="border-top border-bottom py-24 px-24 mt-24">
+                    <div class="d-flex align-items-center">
+                        <img width="55" height="55" class="object-fit-cover rounded-circle flex-shrink-1"
+                            src="./assets/media/user.png" alt="user image" loading="lazy">
+                        <div class="ms-2">
+                            <h6 class="mb-1">Alaa Mohamed</h6>
+                            <span class="text-sm">alaamohamed32@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-24 px-24">
+                    <div class="d-flex justify-content-between">
+                        <span>Follow Us</span>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-primary-color"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="text-primary-color"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="text-primary-color"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" class="text-primary-color"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Search Modal-->
+    <div class="modal fade" id="search" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-body p-4">
+                    <h4 class="text-dark-color mb-30" id="searchLabel">Search</h4>
+                    <form action="">
+                        <div class="d-flex flex-lg-row flex-column gap-3">
+                            <input class="form-control py-3" type="search" name="search" id="search-input"
+                                autocomplete="off" placeholder="Search Doctors and Specializations ...">
+                            <div class="d-flex justify-content-between gap-2">
+                                <button class="btn btn-main btn-1 rounded-pill py-3 px-4">Search</button>
+                                <a class="btn btn-main btn-3 rounded-pill py-3 px-4" data-bs-dismiss="modal">Clear</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="page-content py-60 position-relative overflow-hidden">
+        <div
+            class="position-absolute bottom-0 start-0 d-flex align-items-top justify-content-center z-1 pointer-events-none">
+            <div class="layer-blur opacity-75"></div>
+        </div>
+        <div class="position-absolute bottom-0 end-0 pointer-events-none text-center z-3 mb-60">
+            <img width="417" height="488" src="./assets/media/profile/layer-1.png" alt="layer" loading="lazy"
+                class="wow fadeIn layer-rtl" data-wow-delay="0.2s">
+        </div>
+        <div class="container">
+            <div class="d-flex flex-column gap-40">
+                <div class="bg-light-gray2-color p-30 rounded-4 wow fadeInUp">
+                    <div class="row row-gap-4 align-items-center">
+                        <div class="col-lg-2 text-lg-start text-center">
+                            <img width="185" height="185"
+                                class="border rounded-circle object-fit-cover aspect-square w-auto"
+                                src="./assets/media/profile/avatar.png" alt="patient" loading="lazy">
+                        </div>
+                        <div class="col-lg-10">
+                            <h3 class="text-xxl mb-0 text-lg-start text-center">Alaa Mohamed</h3>
+                            <div
+                                class="d-flex flex-wrap justify-content-lg-start justify-content-center row-gap-3 column-gap-4 text-dark-color py-4">
+                                <div class="d-flex gap-1">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3481 17.806C10.9867 18.1444 10.5037 18.3336 10.0009 18.3336C9.49821 18.3336 9.01515 18.1444 8.65374 17.806C5.34418 14.6885 0.908969 11.206 3.07189 6.14995C4.24136 3.4162 7.04862 1.6669 10.0009 1.6669C12.9532 1.6669 15.7605 3.4162 16.93 6.14995C19.0902 11.1996 14.6658 14.6993 11.3481 17.806Z"
+                                            stroke="#1E1E1E" stroke-width="1.5" />
+                                        <path
+                                            d="M12.9193 9.16667C12.9193 10.7775 11.6134 12.0833 10.0026 12.0833C8.39177 12.0833 7.08594 10.7775 7.08594 9.16667C7.08594 7.55584 8.39177 6.25 10.0026 6.25C11.6134 6.25 12.9193 7.55584 12.9193 9.16667Z"
+                                            stroke="#1E1E1E" stroke-width="1.5" />
+                                    </svg>
+                                    <span>New Cairo , Egypt</span>
+                                </div>
+                                <div class="d-flex gap-1">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_293_2450)">
+                                            <path
+                                                d="M3.14542 9.95131C2.35539 8.57377 1.97394 7.44891 1.74393 6.30869C1.40375 4.62233 2.18224 2.97502 3.47188 1.92391C4.01694 1.47967 4.64175 1.63145 4.96406 2.20968L5.69172 3.51511C6.26847 4.54982 6.55685 5.06718 6.49965 5.61567C6.44245 6.16417 6.05354 6.6109 5.27571 7.50435L3.14542 9.95131ZM3.14542 9.95131C4.74448 12.7396 7.25393 15.2504 10.0454 16.8513M10.0454 16.8513C11.423 17.6413 12.5478 18.0228 13.6881 18.2528C15.3744 18.593 17.0217 17.8145 18.0728 16.5249C18.5171 15.9798 18.3653 15.355 17.7871 15.0327L16.4816 14.305C15.4469 13.7283 14.9296 13.4399 14.3811 13.4971C13.8326 13.5543 13.3858 13.9432 12.4924 14.721L10.0454 16.8513Z"
+                                                stroke="#1E1E1E" stroke-width="1.5" stroke-linejoin="round" />
+                                        </g>
+                                    </svg>
+                                    <span>(+20) 111 049 8494</span>
+                                </div>
+                                <div class="d-flex gap-1">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.66406 5L7.42491 8.26414C9.54873 9.46751 10.4461 9.46751 12.5699 8.26414L18.3307 5"
+                                            stroke="#1E1E1E" stroke-width="1.5" stroke-linejoin="round" />
+                                        <path
+                                            d="M1.6772 11.229C1.73168 13.7836 1.75892 15.0609 2.70153 16.0071C3.64413 16.9533 4.95601 16.9863 7.57975 17.0522C9.19682 17.0928 10.798 17.0928 12.415 17.0522C15.0388 16.9863 16.3507 16.9533 17.2933 16.0071C18.2359 15.0609 18.2631 13.7836 18.3176 11.229C18.3351 10.4076 18.3351 9.59108 18.3176 8.76968C18.2631 6.21507 18.2359 4.93776 17.2933 3.99157C16.3507 3.04537 15.0388 3.01241 12.415 2.94649C10.798 2.90586 9.19682 2.90586 7.57975 2.94648C4.956 3.0124 3.64413 3.04536 2.70152 3.99155C1.75892 4.93775 1.73168 6.21505 1.6772 8.76966C1.65968 9.59107 1.65968 10.4076 1.6772 11.229Z"
+                                            stroke="#1E1E1E" stroke-width="1.5" stroke-linejoin="round" />
+                                    </svg>
+                                    <span>alaamohamed32@gmail.com</span>
+                                </div>
+                                <div class="d-flex gap-1">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 1.66666V3.33332M5 1.66666V3.33332" stroke="#1E1E1E"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M2.07812 10.2027C2.07812 6.57161 2.07812 4.75607 3.12156 3.62803C4.16499 2.5 5.84437 2.5 9.20312 2.5H10.7865C14.1452 2.5 15.8246 2.5 16.868 3.62803C17.9115 4.75607 17.9115 6.57161 17.9115 10.2027V10.6306C17.9115 14.2617 17.9115 16.0773 16.868 17.2053C15.8246 18.3333 14.1452 18.3333 10.7865 18.3333H9.20312C5.84437 18.3333 4.16499 18.3333 3.12156 17.2053C2.07812 16.0773 2.07812 14.2617 2.07812 10.6306V10.2027Z"
+                                            stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M2.5 6.66666H17.5" stroke="#1E1E1E" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span>18 Nov 2000</span>
+                                </div>
+                                <div class="d-flex gap-1">
+                                    <img width="20" height="20" src="./assets/media/profile/gender.png"
+                                        alt="gender icon" loading="lazy">
+                                    <span>Female</span>
+                                </div>
+                            </div>
+                            <div
+                                class="d-flex flex-wrap justify-content-lg-start justify-content-center gap-2 custom-wrap-group">
+                                <a href="./edit-profile.html" class="btn btn-main btn-1 rounded-pill py-2 px-4">Edit
+                                    Profile</a>
+                                <a data-bs-toggle="modal" data-bs-target="#changePasswordModal"
+                                    class="btn btn-main btn-border-primary rounded-pill py-2 px-4">Change
+                                    Password</a>
+                                <a data-bs-toggle="modal" data-bs-target="#deleteAccountModal"
+                                    class="btn btn-main btn-border-danger rounded-pill py-2 px-4">Delete
+                                    Account</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-gap-5">
+                    <div class="col-lg-3">
+                        <div class="bg-light-gray2-color p-30 rounded-4 wow fadeInUp">
+                            <div class="d-flex flex-lg-column flex-row overflow-x-auto gap-2">
+                                <a class="p-12 text-nowrap custom-nav-link  bg-primary-color hover-bg-secondary text-white-color rounded-3"
+                                    href="./patient-profile.html">Out-patients Clinics</a>
+                                <a class="p-12 text-nowrap custom-nav-link text-dark-color  hover-bg-primary hover-text-white rounded-3"
+                                    href="./patient-profile.html">Chemotherapy Unit</a>
+                                <a class="p-12 text-nowrap custom-nav-link text-dark-color  hover-bg-primary hover-text-white rounded-3"
+                                    href="./patient-profile.html">Radiotherapy</a>
+                                <a class="p-12 text-nowrap custom-nav-link text-dark-color  hover-bg-primary hover-text-white rounded-3"
+                                    href="./patient-profile.html">Immunotherapy & Targeted Therapy</a>
+                                <a class="p-12 text-nowrap custom-nav-link text-dark-color  hover-bg-primary hover-text-white rounded-3"
+                                    href="./patient-profile.html">Gamma Knife Radio surgery</a>
+                                <a class="p-12 text-nowrap custom-nav-link text-dark-color  hover-bg-primary hover-text-white rounded-3"
+                                    href="./patient-profile-family-member.html">Family Member</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="bg-light-gray2-color p-30 rounded-4 wow fadeInUp">
+                            <h3 class="text-xxl mb-30">Out-patients Clinics</h3>
+                            <div class="row row-gap-4">
+                                <div class="col-md-6">
+                                    <div class="border bg-white-color p-24 rounded-3">
+                                        <div class="d-flex justify-content-between gap-16">
+                                            <div>
+                                                <h4 class="lg-text-xl text-lg">Dr. Ahmed Alaa</h4>
+                                                <div class="d-flex align-items-start gap-1">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 1.33331V2.66665M4 1.33331V2.66665" stroke="#1E1E1E"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M1.66406 8.16216C1.66406 5.25729 1.66406 3.80486 2.49881 2.90243C3.33355 2 4.67706 2 7.36406 2H8.63073C11.3177 2 12.6612 2 13.496 2.90243C14.3307 3.80486 14.3307 5.25729 14.3307 8.16216V8.5045C14.3307 11.4094 14.3307 12.8618 13.496 13.7642C12.6612 14.6667 11.3177 14.6667 8.63073 14.6667H7.36406C4.67706 14.6667 3.33355 14.6667 2.49881 13.7642C1.66406 12.8618 1.66406 11.4094 1.66406 8.5045V8.16216Z"
+                                                            stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M2 5.33331H14" stroke="#1E1E1E" stroke-width="1.5"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <span>20 Jan 2026 | 11:00 pm</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <span class="text-gray-color">patient: </span>
+                                                <span class="text-dark-color">Alaa Mohamed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="border bg-white-color p-24 rounded-3">
+                                        <div class="d-flex justify-content-between gap-16">
+                                            <div>
+                                                <h4 class="lg-text-xl text-lg">Dr. Ahmed Alaa</h4>
+                                                <div class="d-flex align-items-start gap-1">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 1.33331V2.66665M4 1.33331V2.66665" stroke="#1E1E1E"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M1.66406 8.16216C1.66406 5.25729 1.66406 3.80486 2.49881 2.90243C3.33355 2 4.67706 2 7.36406 2H8.63073C11.3177 2 12.6612 2 13.496 2.90243C14.3307 3.80486 14.3307 5.25729 14.3307 8.16216V8.5045C14.3307 11.4094 14.3307 12.8618 13.496 13.7642C12.6612 14.6667 11.3177 14.6667 8.63073 14.6667H7.36406C4.67706 14.6667 3.33355 14.6667 2.49881 13.7642C1.66406 12.8618 1.66406 11.4094 1.66406 8.5045V8.16216Z"
+                                                            stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M2 5.33331H14" stroke="#1E1E1E" stroke-width="1.5"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <span>20 Jan 2026 | 11:00 pm</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <span class="text-gray-color">patient: </span>
+                                                <span class="text-dark-color">Alaa Mohamed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="border bg-white-color p-24 rounded-3">
+                                        <div class="d-flex justify-content-between gap-16">
+                                            <div>
+                                                <h4 class="lg-text-xl text-lg">Dr. Ahmed Alaa</h4>
+                                                <div class="d-flex align-items-start gap-1">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 1.33331V2.66665M4 1.33331V2.66665" stroke="#1E1E1E"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M1.66406 8.16216C1.66406 5.25729 1.66406 3.80486 2.49881 2.90243C3.33355 2 4.67706 2 7.36406 2H8.63073C11.3177 2 12.6612 2 13.496 2.90243C14.3307 3.80486 14.3307 5.25729 14.3307 8.16216V8.5045C14.3307 11.4094 14.3307 12.8618 13.496 13.7642C12.6612 14.6667 11.3177 14.6667 8.63073 14.6667H7.36406C4.67706 14.6667 3.33355 14.6667 2.49881 13.7642C1.66406 12.8618 1.66406 11.4094 1.66406 8.5045V8.16216Z"
+                                                            stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M2 5.33331H14" stroke="#1E1E1E" stroke-width="1.5"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <span>20 Jan 2026 | 11:00 pm</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <span class="text-gray-color">patient: </span>
+                                                <span class="text-dark-color">Alaa Mohamed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="border bg-white-color p-24 rounded-3">
+                                        <div class="d-flex justify-content-between gap-16">
+                                            <div>
+                                                <h4 class="lg-text-xl text-lg">Dr. Ahmed Alaa</h4>
+                                                <div class="d-flex align-items-start gap-1">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 1.33331V2.66665M4 1.33331V2.66665" stroke="#1E1E1E"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M1.66406 8.16216C1.66406 5.25729 1.66406 3.80486 2.49881 2.90243C3.33355 2 4.67706 2 7.36406 2H8.63073C11.3177 2 12.6612 2 13.496 2.90243C14.3307 3.80486 14.3307 5.25729 14.3307 8.16216V8.5045C14.3307 11.4094 14.3307 12.8618 13.496 13.7642C12.6612 14.6667 11.3177 14.6667 8.63073 14.6667H7.36406C4.67706 14.6667 3.33355 14.6667 2.49881 13.7642C1.66406 12.8618 1.66406 11.4094 1.66406 8.5045V8.16216Z"
+                                                            stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M2 5.33331H14" stroke="#1E1E1E" stroke-width="1.5"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <span>20 Jan 2026 | 11:00 pm</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <span class="text-gray-color">patient: </span>
+                                                <span class="text-dark-color">Alaa Mohamed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="border bg-white-color p-24 rounded-3">
+                                        <div class="d-flex justify-content-between gap-16">
+                                            <div>
+                                                <h4 class="lg-text-xl text-lg">Dr. Ahmed Alaa</h4>
+                                                <div class="d-flex align-items-start gap-1">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 1.33331V2.66665M4 1.33331V2.66665" stroke="#1E1E1E"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M1.66406 8.16216C1.66406 5.25729 1.66406 3.80486 2.49881 2.90243C3.33355 2 4.67706 2 7.36406 2H8.63073C11.3177 2 12.6612 2 13.496 2.90243C14.3307 3.80486 14.3307 5.25729 14.3307 8.16216V8.5045C14.3307 11.4094 14.3307 12.8618 13.496 13.7642C12.6612 14.6667 11.3177 14.6667 8.63073 14.6667H7.36406C4.67706 14.6667 3.33355 14.6667 2.49881 13.7642C1.66406 12.8618 1.66406 11.4094 1.66406 8.5045V8.16216Z"
+                                                            stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M2 5.33331H14" stroke="#1E1E1E" stroke-width="1.5"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <span>20 Jan 2026 | 11:00 pm</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <span class="text-gray-color">patient: </span>
+                                                <span class="text-dark-color">Alaa Mohamed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="border bg-white-color p-24 rounded-3">
+                                        <div class="d-flex justify-content-between gap-16">
+                                            <div>
+                                                <h4 class="lg-text-xl text-lg">Dr. Ahmed Alaa</h4>
+                                                <div class="d-flex align-items-start gap-1">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 1.33331V2.66665M4 1.33331V2.66665" stroke="#1E1E1E"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M1.66406 8.16216C1.66406 5.25729 1.66406 3.80486 2.49881 2.90243C3.33355 2 4.67706 2 7.36406 2H8.63073C11.3177 2 12.6612 2 13.496 2.90243C14.3307 3.80486 14.3307 5.25729 14.3307 8.16216V8.5045C14.3307 11.4094 14.3307 12.8618 13.496 13.7642C12.6612 14.6667 11.3177 14.6667 8.63073 14.6667H7.36406C4.67706 14.6667 3.33355 14.6667 2.49881 13.7642C1.66406 12.8618 1.66406 11.4094 1.66406 8.5045V8.16216Z"
+                                                            stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M2 5.33331H14" stroke="#1E1E1E" stroke-width="1.5"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <span>20 Jan 2026 | 11:00 pm</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <span class="text-gray-color">patient: </span>
+                                                <span class="text-dark-color">Alaa Mohamed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="editMemberModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 p-3">
+                <div class="modal-header border-0 justify-content-center">
+                    <h5 class="modal-title fw-bold">Edit Family Member</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Relation Type</label>
+                                <input type="text" class="form-control py-10" placeholder="Full Name">
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Full Name</label>
+                                <input type="text" class="form-control py-10" placeholder="Full Name">
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Email Address</label>
+                                <input type="text" class="form-control py-10" placeholder="Email Address">
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <label for="gender">Gender</label>
+                                <select class="select form-control py-10" id="gender" name="gender">
+                                    <option value=""> Gender</option>
+                                    <option value=""> Male</option>
+                                    <option value=""> Female</option>
+                                </select>
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <label for="date">Birth of Date</label>
+                                <div class="position-relative">
+                                    <input type="date" class="form-control py-10 pe-4" name="date" autocomplete="date"
+                                        id="date">
+                                    <div
+                                        class="position-absolute end-0 top-0 h-100 d-flex align-items-center justify-content-center px-3 pointer-events-none">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_889_342)">
+                                                <path d="M12 1.33331V2.66665M4 1.33331V2.66665" stroke="#1E1E1E"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
+                                                <path
+                                                    d="M1.66602 8.16216C1.66602 5.25729 1.66602 3.80486 2.50076 2.90243C3.33551 2 4.67901 2 7.36602 2H8.63268C11.3197 2 12.6632 2 13.4979 2.90243C14.3327 3.80486 14.3327 5.25729 14.3327 8.16216V8.5045C14.3327 11.4094 14.3327 12.8618 13.4979 13.7642C12.6632 14.6667 11.3197 14.6667 8.63268 14.6667H7.36602C4.67901 14.6667 3.33551 14.6667 2.50076 13.7642C1.66602 12.8618 1.66602 11.4094 1.66602 8.5045V8.16216Z"
+                                                    stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M2 5.33331H14" stroke="#1E1E1E" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_889_342">
+                                                    <rect width="16" height="16" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Phone Number</label>
+                                <input type="text" class="form-control py-10" placeholder="Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-4">
+                            <button type="submit" class="btn btn-main btn-1 rounded-pill py-2 px-4">Save</button>
+                            <button type="button"
+                                class="btn btn-main btn-border-primary rounded-pill py-2 px-4">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteMemberModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 p-4">
+                <div class="modal-body text-center">
+                    <!-- Icon -->
+                    <div class="mb-4">
+                        <svg width="80" height="80" viewBox="0 0 102 91" fill="none" xmlns="http://w3.org">
+                            <path d="M51 1L1 86H101L51 1Z" stroke="#FF0000" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M51 30V55M51 65H51.05" stroke="#FF0000" stroke-width="5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Text -->
+                    <h4 class="mb-3">Deleting Family Member</h4>
+                    <p class="text-muted mb-4">You Are Sure You Want To Delete Your Family Member?</p>
+
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-center gap-3">
+                        <button type="button" class="btn btn-main btn-danger rounded-pill  py-2 px-4">Yes,
+                            Delete</button>
+                        <button type="button" class="btn btn-border-danger rounded-pill  py-2 px-4">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 p-4">
+                <div class="modal-body text-center">
+                    <!-- Icon -->
+                    <div class="mb-4">
+                        <svg width="80" height="80" viewBox="0 0 102 91" fill="none" xmlns="http://w3.org">
+                            <path d="M51 1L1 86H101L51 1Z" stroke="#FF0000" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M51 30V55M51 65H51.05" stroke="#FF0000" stroke-width="5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Text -->
+                    <h4 class="mb-3">Deleting Your Account</h4>
+                    <p class="text-muted mb-4">You are sure you want to delete your Account?</p>
+
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-center gap-3">
+                        <button type="button" class="btn btn-main btn-danger rounded-pill  py-2 px-4">Yes,
+                            Delete</button>
+                        <button type="button" class="btn btn-border-danger rounded-pill  py-2 px-4">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 p-3">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Change Password</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Old Password</label>
+                                <input type="text" class="form-control py-10" placeholder="">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal"
+                                    class="text-primary-color">Forget Password?</a>
+                            </div>
+
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">New Password</label>
+                                <input type="text" class="form-control py-10" placeholder="">
+                            </div>
+
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Confirm New Password</label>
+                                <input type="text" class="form-control py-10" placeholder="">
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex gap-2 mt-4">
+                            <button type="submit"
+                                class="btn btn-main btn-1 rounded-pill py-2 px-4 flex-grow-1">Change</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="forgetPasswordModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 p-3">
+                <div class="modal-header border-0 flex-column align-items-start">
+                    <h5 class="modal-title">Forget Password</h5>
+                    <p class="text-muted">We will Send Verification Code to your Email Address</p>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Email Address</label>
+                                <input type="text" class="form-control py-10" placeholder="Email Address">
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex gap-2 mt-4">
+                            <a href="#" class="btn btn-main btn-1 rounded-pill py-2 px-4 flex-grow-1"
+                                data-bs-toggle="modal" data-bs-target="#passwordResetModal">Send</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="passwordResetModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 p-3">
+                <div class="modal-header border-0 flex-column align-items-start">
+                    <h5 class="modal-title">Password Reset</h5>
+                    <p class="text-muted">Verification code sent to alaa@gmail.com</p>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-center justify-content-center gap-3">
+                                <input class="form-control input-otp" />
+                                <input class="form-control input-otp" />
+                                <input class="form-control input-otp" />
+                                <input class="form-control input-otp" />
+                            </div>
+
+                            <div class="text-sm text-sm-start text-center">Didn’t receive the code?
+                                <span class="countdown">
+                                    <span id="timer-min" style="--value: 1"></span>:
+                                    <span id="timer-sec" style="--value: 45"></span>
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex gap-2 mt-4">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#newPasswordModal"
+                                class="btn btn-main btn-1 rounded-pill py-2 px-4 flex-grow-1">Continue</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="newPasswordModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 p-3">
+                <div class="modal-header border-0 flex-column align-items-start">
+                    <h5 class="modal-title">Set New Password</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">New Password</label>
+                                <input type="text" class="form-control py-10" placeholder="">
+                            </div>
+
+                            <div class="d-flex flex-column gap-1">
+                                <label class="form-label small">Confirm New Password</label>
+                                <input type="text" class="form-control py-10" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-4">
+                            <a href="#" class="btn btn-main btn-1 rounded-pill py-2 px-4 flex-grow-1"
+                                data-bs-toggle="modal" data-bs-target="#successModal">Reset Password</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="bg-secondary-color text-sm py-30 wow fadeIn position-relative overflow-hidden z-1">
+        <div
+            class="position-absolute top-0 start-0 end-0 mx-auto h-100 d-flex align-items-center justify-content-center z-n1">
+            <div class="layer-blur"></div>
+        </div>
+        <div class="container">
+            <div class="d-flex flex-column gap-48">
+                <div class="d-flex flex-wrap gap-42">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Departments</a>
+                    <a href="#">Media Center</a>
+                </div>
+                <div class="row row-gap-5">
+                    <div class="col-lg-5">
+                        <div class="d-flex flex-column gap-24">
+                            <a href="#"><img width="190" src="./assets/media/leksell-white.webp" alt="leksell logo"
+                                    loading="lazy"></a>
+                            <span class="max-w-300 text-sm">Combining experience, innovation, and patient-focused care
+                                to deliver accurate diagnoses and effective treatments.</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="row row-gap-5">
+                            <div class="col-sm-6">
+                                <div class="d-flex flex-column gap-48">
+                                    <div class="d-flex flex-column gap-8">
+                                        <span class="text-uppercase text-xs opacity-50">Phone Number</span>
+                                        <a href="tel:(+20) 999-99-99" class="hover-opacity-50">(+20) 999-99-99</a>
+                                    </div>
+                                    <div class="d-flex flex-column gap-8">
+                                        <span class="text-uppercase text-xs opacity-50">Email</span>
+                                        <a href="mailto:shifa@gmail.com" class="hover-opacity-50">shifa@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex flex-column gap-8">
+                                    <span class="text-uppercase text-xs opacity-50">Location</span>
+                                    <span>10th of Ramadan City‎‏، ‏‎Al Sharqia Governorate‎‏ ‏‎</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyrights bg-primary-color py-20">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <span>Designed by NetWave</span>
+                <span>Copyright © 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="./assets/vendor/bootstrap-5.3.8/js/bootstrap.bundle.min.js" defer></script>
+    <script src="./assets/vendor/WOW-master/wow.min.js" defer></script>
+    <script src="./assets/vendor/slim-select-master/slimselect.js" defer></script>
+    <script src="./assets/vendor/splide4.1.3/js/splide.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js" defer></script>
+    <script src="./assets/vendor/flatpickr/flatpickr.js" defer></script>
+    <script src="./assets/js/scripts.js" defer></script>
+</body>
+
+</html>
