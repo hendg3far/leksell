@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--If Rtl add lang="ar" dir="rtl" -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifa Hospital</title>
+
+    <!--If Rtl replace bootstrap.min.css by bootstrap.rtl.min.css-->
+    <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3.8/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3.8/css/bootstrap.rtl.min.css"> -->
+
+    <link rel="stylesheet" href="./assets/vendor/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/vendor/WOW-master/animate.css">
+    <link rel="stylesheet" href="./assets/vendor/slim-select-master/slimselect.css">
+    <link rel="stylesheet" href="./assets/vendor/splide4.1.3/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="./assets/vendor/flatpickr/flatpickr.min.css">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body class="vh-100">
+
+    <div class="row mx-0 h-100">
+        <div class="col-lg-6 h-100 position-relative d-lg-block d-none z-1 p-40">
+            <img class="position-absolute z-n1 top-0 start-0 h-100 w-100 object-fit-cover"
+                src="./assets/media/auth/bg.png" alt="bg" loading="eager">
+            <a href="#"><img width="155" src="./assets/media/logo.webp" alt=""></a>
+            <h2 class="text-42 mt-60 w-75">We’re proud that you’re part of us</h2>
+        </div>
+        <div class="col-lg-6 p-0 bg-white-color h-100 position-relative overflow-y-auto">
+            <div class="position-absolute text-center top-20 end-0 pointer-events-none">
+                <div class="layer-blur"></div>
+            </div>
+            <div class="position-absolute text-center top-20 end-0 start-0 mx-auto pointer-events-none">
+                <img src="./assets/media/auth/layer-1.svg" alt="layer-2" loading="lazy"
+                    class="mx-auto wow fadeIn layer-rtl" data-wow-delay="0.2s">
+            </div>
+            <div class="lg-px-40 px-24 lg-py-60 py-32 d-flex flex-column h-100">
+                <div class="d-flex align-items-center justify-content-between">
+                    <a href="#"><img width="120" class="d-lg-none d-block" src="./assets/media/logo.webp" alt=""></a>
+                    <a class="d-flex gap-1 ms-auto text-primary-color" href="#">
+                        العربية <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22M12 2C9.49872 4.73835 8.07725 8.29203 8 12C8.07725 15.708 9.49872 19.2616 12 22M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22M2.50002 9H21.5M2.5 15H21.5"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-lg-9 mx-auto my-auto">
+                    <h1 class="mt-lg-0 mt-40 text-xxl wow fadeInDown">Log in to your account</h1>
+                    <p class="mb-32">Welcome back! Please enter your details.</p>
+                    <form action="">
+                        <div class="d-flex flex-column gap-4">
+                            <div class="d-flex flex-column gap-1">
+                                <label for="">Phone Number/Email Address</label>
+                                <input type="text" class="form-control form-control-md"
+                                    placeholder="Phone Number/Email Address">
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <label for="">Password</label>
+                                <input type="password" class="form-control form-control-md" placeholder="">
+
+                                <a class="text-dark-green-color mt-10" href="">Forget Password?</a>
+                            </div>
+
+
+                            <div class="d-flex flex-column gap-15">
+                                <button type="submit" class="btn btn-main btn-1 rounded-pill py-3 px-4 w-100">
+                                    Login</button>
+                                <div class="d-flex gap-4 align-items-center">
+                                    <div class="d-block w-100" style="height: 1px;background-color: #D0D5DD;"></div>
+                                    <span>Or</span>
+                                    <div class="d-block w-100" style="height: 1px;background-color: #D0D5DD;"></div>
+                                </div>
+
+                                <a href="" class="btn btn-border rounded-pill py-3 px-4 w-100"><img
+                                        src="./assets/media/auth/google.svg" alt="google logo" loading="lazy">
+                                    <span class="ms-1">Login with Google</span></a>
+
+                                <div class="text-center">
+                                    <span>Don’t have an account?</span> <a class="text-primary-color" href="">Register
+                                        Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-40">
+                    <div class="d-flex flex-column align-items-center justify-content-center gap-32">
+                        <img width="120" src="./assets/media/specializations/checkmark.svg" alt="checkmark"
+                            loading="lazy">
+                        <div class="d-flex flex-column justify-content-center align-items-center gap-15 text-center">
+                            <h4 class="text-xxl">Account Created Successfully!</h4>
+                            <span class="text-gray-color">Your profile has been set up</span>
+                            <span class="text-xl text-dark-color font-bold">Welcome Onboard 🎉</span>
+                            <span class="text-gray-color">You will be redirected to your dashboard shortly</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="./assets/vendor/bootstrap-5.3.8/js/bootstrap.bundle.min.js" defer></script>
+    <script src="./assets/vendor/WOW-master/wow.min.js" defer></script>
+    <script src="./assets/vendor/slim-select-master/slimselect.js" defer></script>
+    <script src="./assets/vendor/splide4.1.3/js/splide.min.js" defer></script>
+    <script src="./assets/vendor/splide4.1.3/js/splide-extension-grid.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js" defer></script>
+    <script src="./assets/vendor/flatpickr/flatpickr.js" defer></script>
+    <script src="./assets/js/scripts.js" defer></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const steps = Array.from(document.querySelectorAll(".form-step"));
+            const nextButtons = document.querySelectorAll(".next-btn");
+            const prevButtons = document.querySelectorAll(".prev-btn");
+            const wizardForm = document.getElementById("wizard");
+            let currentStep = 0;
+
+            function showStep(index) {
+                steps.forEach((step, i) => {
+                    if (i === index) {
+                        step.classList.add("active-step");
+                        step.classList.remove("d-none");
+                    } else {
+                        step.classList.remove("active-step");
+                        step.classList.add("d-none");
+                    }
+                });
+            }
+
+            nextButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    if (currentStep < steps.length - 1) {
+                        currentStep++;
+                        showStep(currentStep);
+                    }
+                });
+            });
+
+            prevButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    if (currentStep > 0) {
+                        currentStep--;
+                        showStep(currentStep);
+                    }
+                });
+            });
+
+            if (wizardForm) {
+                wizardForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const successModalElement = document.getElementById('confirmation');
+                    const successModal = new bootstrap.Modal(successModalElement);
+                    successModal.show();
+                });
+            }
+
+            const toggles = document.querySelectorAll(".password-toggle");
+            toggles.forEach(toggle => {
+                toggle.addEventListener("click", function () {
+                    const input = this.parentElement.querySelector("input");
+                    const icon = this.querySelector("i");
+
+                    if (input.type === "password") {
+                        input.type = "text";
+                        icon.classList.remove("fa-eye");
+                        icon.classList.add("fa-eye-slash");
+                    } else {
+                        input.type = "password";
+                        icon.classList.remove("fa-eye-slash");
+                        icon.classList.add("fa-eye");
+                    }
+                });
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
