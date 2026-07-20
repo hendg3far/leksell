@@ -25,8 +25,21 @@
 
 <body>
 
+    <section class="top-bar text-white text-sm d-lg-none d-block position-absolute top-0 start-0 w-100 pt-25 z-3">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-4">
+                <div class="d-flex justify-content-center align-items-center gap-3 col">
+                    <div class="d-lg-none d-block">
+                        <a href="./index.html"><img width="150" src="./assets/media/leksell-white.webp" alt="logo"
+                                loading="lazy"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--Menu Desktop-->
-    <nav class="navbar navbar-1 navbar-expand-lg d-lg-block d-none position-absolute top-0 start-0 w-100">
+    <nav class="navbar navbar-1 navbar-expand-lg d-lg-block d-none position-absolute top-0 start-0 w-100 pt-25">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
                 <img src="./assets/media/leksell-white.webp" alt="Shifa Hospital Logo" width="155" loading="lazy">
@@ -53,7 +66,7 @@
             </div>
 
             <div class="d-flex align-items-center gap-4 ms-auto">
-                <a href="#" class="btn btn-main btn-2 py-2 px-4"> Book Appointment</a>
+                <a href="#" class="btn btn-main btn-1 py-2 px-4"> Book Appointment</a>
 
                 <a href="#" class="btn btn-border-white py-2 px-4">
                     <span class="xl-text-md text-sm">Login</span>
@@ -76,10 +89,9 @@
             <img width="24" height="24" src="./assets/media/icons/mobile/li_search.webp" loading="lazy">
             <span>Search</span>
         </a>
-        <a href="./specializations.html"
-            class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
+        <a href="#" class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
             <img width="24" height="24" src="./assets/media/icons/mobile/first-aid-kit.webp" loading="lazy">
-            <span>Specializations</span>
+            <span>Departments</span>
         </a>
         <a href="#" class="mobile-menu-link d-flex flex-column justify-content-center align-items-center gap-1">
             <img width="24" height="24" src="./assets/media/icons/mobile/li_user.webp" loading="lazy">
@@ -96,10 +108,10 @@
     <div class="offcanvas offcanvas-end menu-offcanvas" tabindex="-1" id="menu" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                <img width="120" src="./assets/media/logo.webp" alt="logo" loading="lazy">
+                <img width="150" src="./assets/media/logo.png" alt="logo" loading="lazy">
             </h5>
         </div>
-        <div class="offcanvas-body d-flex flex-column px-0">
+        <div class="offcanvas-body d-flex flex-column px-0 pt-40">
 
             <div class="d-flex flex-column gap-4 px-24">
 
@@ -107,30 +119,30 @@
                     <img src="./assets/media/icons/mobile/home-01.svg" loading="lazy">
                     <span>Home</span>
                 </a>
-                <a href="./specializations.html" class="menu-link d-flex align-items-start gap-2">
+                <a href="#" class="menu-link d-flex align-items-start gap-2">
                     <img src="./assets/media/icons/mobile/first-aid-kit-01.svg" loading="lazy">
-                    <span>Specializations</span>
+                    <span>Departments</span>
                 </a>
-                <a href="./offers.html" class="menu-link d-flex align-items-start gap-2">
+                <!-- <a href="./offers.html" class="menu-link d-flex align-items-start gap-2">
                     <img src="./assets/media/icons/mobile/sale-tag-02.svg" loading="lazy">
                     <span>Offers</span>
-                </a>
+                </a> -->
                 <a href="news.html" class="menu-link d-flex align-items-start gap-2">
                     <img src="./assets/media/icons/mobile/news.svg" loading="lazy">
                     <span>News & Events</span>
                 </a>
-                <a href="./careers.html" class="menu-link d-flex align-items-start gap-2">
+                <!-- <a href="./careers.html" class="menu-link d-flex align-items-start gap-2">
                     <img src="./assets/media/icons/mobile/briefcase-05.svg" loading="lazy">
                     <span>People and Culture</span>
-                </a>
+                </a> -->
                 <a href="#" class="menu-link d-flex align-items-start gap-2">
                     <img src="./assets/media/icons/mobile/bubble-chat-question.svg" loading="lazy">
                     <span>FAQs</span>
                 </a>
-                <a href="#" class="menu-link d-flex align-items-start gap-2">
+                <!-- <a href="#" class="menu-link d-flex align-items-start gap-2">
                     <img src="./assets/media/icons/mobile/covid-info.svg" loading="lazy">
-                    <span>Health and Wellness Resources</span>
-                </a>
+                    <span>Book Appointment</span>
+                </a> -->
                 <a href="./contact.html" class="menu-link d-flex align-items-start gap-2">
                     <img src="./assets/media/icons/mobile/call.svg" loading="lazy">
                     <span>Contact Us</span>
@@ -151,25 +163,13 @@
             </div>
 
             <div class="mt-auto">
-                <div class="border-top border-bottom py-24 px-24 mt-24">
+                <div class="border-top py-24 px-24 mt-24">
                     <div class="d-flex align-items-center">
                         <img width="55" height="55" class="object-fit-cover rounded-circle flex-shrink-1"
                             src="./assets/media/user.png" alt="user image" loading="lazy">
                         <div class="ms-2">
                             <h6 class="mb-1">Alaa Mohamed</h6>
                             <span class="text-sm">alaamohamed32@gmail.com</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-24 px-24">
-                    <div class="d-flex justify-content-between">
-                        <span>Follow Us</span>
-                        <div class="d-flex gap-3">
-                            <a href="#" class="text-primary-color"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="text-primary-color"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#" class="text-primary-color"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="#" class="text-primary-color"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -200,22 +200,44 @@
     </div>
 
     <!--Hero-->
-    <section class="hero">
+    <section class="hero position-relative text-white-color">
+        <div
+            class="position-absolute top-0 start-0 end-0 mx-auto h-100 d-flex align-items-top justify-content-center z-1 pointer-events-none">
+            <div class="layer-blur opacity-75"></div>
+        </div>
+        <div
+            class="position-absolute bottom-0 end-0 mx-auto h-100 d-flex align-items-end justify-content-center z-1 pointer-events-none">
+            <div class="layer-blur opacity-75"></div>
+        </div>
         <div class="splide hero-slider">
             <div class="splide__track">
                 <div class="splide__list">
-                    <div class="splide__slide">
-                        <div class="splide__slide">
-                            <video class="w-100 h-100 object-fit-cover" autoplay muted loop playsinline
-                                poster="./assets/media/hero/home-hero-image.webp" preload="metadata">
-                                <source src="./assets/media/hero/hospital-video.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
+                    <div class="splide__slide position-relative">
+                        <video class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 z-n1" autoplay muted
+                            loop playsinline poster="./assets/media/hero/home-hero-image.webp" preload="metadata">
+                            <source src="./assets/media/hero/hospital-video.mp4" type="video/mp4">
+                        </video>
+                        <div class="z-2 lg-pt-250 pt-160 pb-140">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 mx-auto">
+                                        <div class="d-flex flex-column gap-32 text-center">
+                                            <h1 class="lg-text-58 text-32 text-white-color mb-0 wow fadeInDown">Trusted
+                                                Medical Care
+                                                You Can Rely On</h1>
+                                            <div class="lg-text-32 text-20 mb-0 wow fadeInUp" data-wow-delay="0.2s">
+                                                Combining experience, innovation, and
+                                                patient-focused care to deliver accurate diagnoses and effective
+                                                treatments.</div>
 
-                    <div class="splide__slide">
-                        <img class="w-100 h-100 object-fit-cover" src="./assets/media/hero/home-hero-image.webp"
-                            alt="banner" loading="lazy">
+                                            <div>
+                                                <a href="#" class="btn btn-main btn-1 py-2 px-4"> Book Appointment</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -291,9 +313,9 @@
 
     <!--Features-->
     <section class="features position-relative md-py-100 py-30 z-2">
-        <div class="position-absolute end-0 top-0 translate-middle-y  pointer-events-none z-n1">
-            <img width="365" height="430" src="./assets/media/layers/layer-1.webp" alt="layer" loading="lazy"
-                class="wow fadeIn layer-rtl" data-wow-delay="0.2s">
+        <div
+            class="position-absolute bottom-0 start-0 end-0 mx-auto h-100 d-flex align-items-end justify-content-center z-n1">
+            <div class="layer-blur opacity-50"></div>
         </div>
         <div class="container">
             <div class="row row-gap-4">
@@ -340,11 +362,11 @@
     <!--Specializations-->
     <section class="specializations position-relative bg-light-gray-color py-60 z-3">
         <div class="position-absolute start-0 translate-middle-y z-n1  pointer-events-none">
-            <img width="438" height="544" src="./assets/media/layers/layer-2.webp" alt="layer-2" loading="lazy"
+            <img width="478" height="558" src="./assets/media/layers/layer-1.png" alt="layer-1" loading="lazy"
                 class="wow fadeIn layer-rtl" data-wow-delay="0.2s">
         </div>
         <div class="container">
-            <div class="d-flex flex-column gap-32">
+            <div class="d-flex flex-column gap-42">
                 <div class="text-center">
                     <h2 class="lg-text-42 text-32 m-0 wow fadeInDown">Specialized Care You Can Trust</h2>
                 </div>
@@ -491,16 +513,118 @@
                 </div>
             </div>
         </div>
-        <div class="position-absolute bottom-0 end-0 pointer-events-none">
-            <img width="517" height="618" src="./assets/media/layers/layer-3.webp" alt="layer-2" loading="lazy"
+        <div class="position-absolute bottom-0 end-0 pointer-events-none translate-y">
+            <img width="462" height="540" src="./assets/media/layers/layer-2.png" alt="layer-2" loading="lazy"
                 class="wow fadeIn layer-rtl" data-wow-delay="0.2s">
         </div>
     </section>
 
+    <!---->
+    <div class="py-60  wow fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="bg-dark-green-color text-white-color lg-p-60 p-30 rounded-4">
+                        <div class="row row-gap-5">
+                            <div class="col-lg-6">
+                                <div class="d-flex flex-column gap-30">
+                                    <span class="text-xl">About Our Hospital</span>
+                                    <h2 class="text-white-color lg-text-42 text-32 m-0">Caring for You,
+                                        Every Step of the Way</h2>
+                                    <div>We are committed to providing world-class healthcare services with compassion
+                                        and excellence. Our multidisciplinary team ensures personalized treatment plans
+                                        tailored to every patient’s needs.</div>
+                                    <div>
+                                        <a href="#" class="btn btn-main btn-1 py-2 px-4">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img class="w-100 rounded-4" src="./assets/media/bg/operation.webp" alt="operation"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Services-->
+    <div class="services position-relative py-60">
+        <div class="container">
+            <div class="d-flex flex-column gap-42">
+                <div class="text-center">
+                    <h2 class="lg-text-42 text-32 m-0 wow fadeInDown">Why Choose Us for Your Care</h2>
+                </div>
+                <div class="row row-gap-5">
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center text-center gap-24 wow fadeInUp">
+                            <div class="icon icon-95 rounded-circle bg-primary-color">
+                                <img src="./assets/media/services/serv-1.png" alt="serv title" loading="lazy">
+                            </div>
+                            <h3 class="text-xxxl mb-0">Expert Medical Team</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center text-center gap-24 wow fadeInUp">
+                            <div class="icon icon-95 rounded-circle bg-primary-color">
+                                <img src="./assets/media/services/serv-2.png" alt="serv title" loading="lazy">
+                            </div>
+                            <h3 class="text-xxxl mb-0">Advanced Technology</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center text-center gap-24 wow fadeInUp">
+                            <div class="icon icon-95 rounded-circle bg-primary-color">
+                                <img src="./assets/media/services/serv-3.png" alt="serv title" loading="lazy">
+                            </div>
+                            <h3 class="text-xxxl mb-0">Patient-Centered Care</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---->
+    <div class="position-relative py-60">
+        <div class="position-absolute start-0 translate-middle-y z-n1  pointer-events-none">
+            <img width="344" height="403" src="./assets/media/layers/layer-3.png" alt="layer-3" loading="lazy"
+                class="wow fadeIn layer-rtl" data-wow-delay="0.2s">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="row row-gap-5 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="d-flex flex-column gap-24">
+                                <h2 class="lg-text-42 text-32 m-0 wow fadeInDown">Your Health Records, Anytime</h2>
+                                <div class="text-xl">Access your medical records, track appointments, and stay updated
+                                    with your treatment history securely.</div>
+                                <div>
+                                    <a href="#" class="btn btn-main btn-1 py-2 px-4">Login to Portal</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-relative z-1">
+                                <div class="position-absolute top-0 end-0 w-100 h-100 z-n1">
+                                    <div class="layer-blur-1"></div>
+                                </div>
+                                <img class="w-100" src="./assets/media/bg/doctor.webp" alt="doctor" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Events-->
     <section class="events position-relative overflow-hidden py-60">
         <div class="container">
-            <div class="d-flex flex-column gap-32">
+            <div class="d-flex flex-column gap-42">
                 <div class="row align-items-center justify-content-between  wow fadeInDown">
                     <div class="col-lg-8">
                         <h2 class="lg-text-42 text-32 m-0">News & EventsStay informed with the latest medical insights
@@ -532,7 +656,7 @@
                                     src="./assets/media/specialization/1-small.webp" alt="specialize 1" loading="lazy">
                             </div>
                             <div class="card-body p-0 pt-3">
-                                <a href="#" class="mb-1 d-block hover-text-primary text-sm">News</a>
+                                <a href="#" class="mb-1 d-block hover-text-primary text-sm">August 20, 2022</a>
                                 <h5 class="text-xl">Lorem Ipsum is simply dummy text of the printing and
                                     typesetting industry</h5>
                                 <a href="#" class="text-primary-color hover-text-secondary animated-arrow mt-10">
@@ -557,7 +681,7 @@
                                     src="./assets/media/specialization/3-small.webp" alt="specialize 1" loading="lazy">
                             </div>
                             <div class="card-body p-0 pt-3">
-                                <a href="#" class="mb-1 d-block hover-text-primary text-sm">News</a>
+                                <a href="#" class="mb-1 d-block hover-text-primary text-sm">August 20, 2022</a>
                                 <h5 class="text-xll">Lorem Ipsum is simply dummy text of the printing and
                                     typesetting industry</h5>
                                 <a href="#" class="text-primary-color hover-text-secondary animated-arrow mt-10">
@@ -582,7 +706,7 @@
                                     src="./assets/media/specialization/2-small.webp" alt="specialize 1" loading="lazy">
                             </div>
                             <div class="card-body p-0 pt-3">
-                                <a href="#" class="mb-1 d-block hover-text-primary text-sm">News</a>
+                                <a href="#" class="mb-1 d-block hover-text-primary text-sm">August 20, 2022</a>
                                 <h5 class="text-xll">Lorem Ipsum is simply dummy text of the printing and
                                     typesetting industry</h5>
                                 <a href="#" class="text-primary-color hover-text-secondary animated-arrow mt-10">
@@ -605,52 +729,18 @@
         </div>
     </section>
 
-    <section class="md-my-60 my-30">
-        <div class="container">
-            <div class="position-relative z-1 py-60">
-                <img class="position-absolute top-0 start-0 rounded-4 w-100 h-100 object-fit-cover z-n1"
-                    src="./assets/media/bg/doctor.webp" alt="doctor bg" loading="lazy">
-
-                <div class="row">
-                    <div class="col-lg-5 mx-auto">
-                        <div class="text-center text-white-color d-flex flex-column gap-3 px-24">
-                            <img class="mx-auto wow fadeInDown" width="284" src="./assets/media/leksell-white.webp"
-                                alt="leksell" loading="lazy">
-                            <h2 class="text-white-color lg-text-42 text-32 wow fadeInUp">Leksell Oncology Center</h2>
-                            <p class="wow fadeInUp">Egestas fringilla aliquam leo, habitasse arcu varius lorem
-                                elit. Neque pellentesque donec
-                                et tellus ac varius tortor, bibendum. Nulla felis ac turpis at amet. Purus malesuada
-                                placerat arcu at enim elit in accumsan.</p>
-
-                            <div class=" wow fadeInUp">
-                                <a href="#" class="btn btn-main btn-2 animated-arrow rounded-pill py-3 px-4">
-                                    Visit Website
-                                    <span class="arrow-wrapper">
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                                            xmlns="http://w3.org">
-                                            <path
-                                                d="M1.82514 0.780578L9.58976 0.600006L9.40919 8.36462M9.2993 0.763479L0.600098 9.46268"
-                                                stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
-                                                stroke-linejoin="round"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!--Providers-->
-    <section class="providers position-relative overflow-hidden md-py-100 py-30">
-        <div class="position-absolute end-0 top-0 pointer-events-none z-2">
-            <img width="365" height="430" src="./assets/media/layers/layer-1.webp" alt="layer" loading="lazy"
+    <section class="providers position-relative md-py-100 py-30">
+        <div
+            class="position-absolute bottom-0 start-0 end-0 mx-auto h-100 d-flex align-items-end justify-content-center z-n1">
+            <div class="layer-blur opacity-75"></div>
+        </div>
+        <div class="position-absolute end-0 top-0 translate-middle-y z-n1  pointer-events-none">
+            <img width="438" height="544" src="./assets/media/layers/layer-4.png" alt="layer-2" loading="lazy"
                 class="wow fadeIn layer-rtl" data-wow-delay="0.2s">
         </div>
         <div class="container">
-            <div class="d-flex flex-column gap-32">
+            <div class="d-flex flex-column gap-42">
                 <div class="text-center">
                     <h2 class="lg-text-42 text-32 m-0  wow fadeInDown">We partner with leading insurance providers to
                         make healthcare accessible and affordable.</h2>
@@ -690,33 +780,46 @@
     </section>
 
     <!--Footer-->
-    <footer class="bg-secondary-color text-sm py-30 wow fadeIn">
+    <footer class="bg-secondary-color text-sm py-30 wow fadeIn position-relative overflow-hidden z-1">
+        <div
+            class="position-absolute top-0 start-0 end-0 mx-auto h-100 d-flex align-items-center justify-content-center z-n1">
+            <div class="layer-blur"></div>
+        </div>
         <div class="container">
             <div class="d-flex flex-column gap-48">
-                <div class="d-flex flex-wrap gap-32">
+                <div class="d-flex flex-wrap gap-42">
                     <a href="#">Home</a>
                     <a href="#">About</a>
                     <a href="#">Departments</a>
                     <a href="#">Media Center</a>
                 </div>
                 <div class="row row-gap-5">
-                    <div class="col-lg-6">
+                    <div class="col-lg-5">
                         <div class="d-flex flex-column gap-24">
+                            <a href="#"><img width="190" src="./assets/media/leksell-white.webp" alt="leksell logo"
+                                    loading="lazy"></a>
                             <span class="max-w-300 text-sm">Combining experience, innovation, and patient-focused care
-                                to deliver
-                                accurate diagnoses and effective treatments.</span>
+                                to deliver accurate diagnoses and effective treatments.</span>
                         </div>
                     </div>
-                    <div class="col-lg-5 offset-lg-1">
-                        <div class="row row-gap-5 align-items-center">
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="row row-gap-5">
                             <div class="col-sm-6">
-                                <div class="d-flex flex-column gap-24">
-                                    <span class="text-uppercase text-xs">Contact us</span>
-                                    <div class="d-flex flex-column gap-2 font-bold">
+                                <div class="d-flex flex-column gap-48">
+                                    <div class="d-flex flex-column gap-8">
+                                        <span class="text-uppercase text-xs opacity-50">Phone Number</span>
                                         <a href="tel:(+20) 999-99-99" class="hover-opacity-50">(+20) 999-99-99</a>
-                                        <a href="emailto:shifa@gmail.com" class="hover-opacity-50">shifa@gmail.com</a>
-                                        <span>Cairo</span>
                                     </div>
+                                    <div class="d-flex flex-column gap-8">
+                                        <span class="text-uppercase text-xs opacity-50">Email</span>
+                                        <a href="mailto:shifa@gmail.com" class="hover-opacity-50">shifa@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex flex-column gap-8">
+                                    <span class="text-uppercase text-xs opacity-50">Location</span>
+                                    <span>10th of Ramadan City‎‏، ‏‎Al Sharqia Governorate‎‏ ‏‎</span>
                                 </div>
                             </div>
                         </div>
@@ -725,6 +828,15 @@
             </div>
         </div>
     </footer>
+
+    <div class="copyrights bg-primary-color py-20">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <span>Designed by NetWave</span>
+                <span>Copyright © 2026</span>
+            </div>
+        </div>
+    </div>
 
     <!-- <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
     <script src="./assets/vendor/bootstrap-5.3.8/js/bootstrap.bundle.min.js" defer></script>

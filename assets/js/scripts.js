@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             rewind: true,
             speed: 1200,
             perPage: 1,
-            arrows: true,
+            arrows: false,
             pagination: false,
         }).mount();
     }
