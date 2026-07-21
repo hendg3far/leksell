@@ -1344,12 +1344,34 @@ footer {
     width: 100%;
 }
 
-@media(min-width:992px) {
-    .about-features {
-        .row .col-lg-4:nth-child(3n + 2) .card {
-            margin-top: -50px;
-        }
+.feature-box {
+    border: 1px solid rgba(60, 228, 168, 1);
+    border-radius: 20px;
+    text-align: center;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 450px;
+}
+
+@media (min-width: 992px) {
+    .box-left {
+        transform: translateY(-35px) rotate(-4deg);
+        transform-origin: center;
     }
+
+    .box-center {
+        transform: translateY(-25px) rotate(-1deg);
+        z-index: 2;
+    }
+
+    // .box-right {
+    //     transform: translateY(50px) rotate(4deg);
+    //     transform-origin: center;
+    // }
 }
 
 @media(max-width:575.98px) {
