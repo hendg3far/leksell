@@ -1417,132 +1417,8 @@ footer {
 }
 
 
-@media(max-width:575.98px) {
-    .about-video .video-icon a {
-        width: 60px;
-        height: 60px;
 
-        svg {
-            width: 40px;
-            height: 40px;
-        }
-    }
-}
 
-.milestone-container {
-    .milestone-item {
-        min-height: 179px;
-    }
-
-    .card {
-        background-color: #e6f0ec;
-        padding: 14px 6px;
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
-    @media (min-width: 992px) {
-        margin-top: 75px;
-
-        .row {
-            &::before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                border-top: 2px dashed #008d5c;
-                transform: translateY(-50%);
-                z-index: 0;
-                opacity: .3;
-            }
-        }
-
-        .col-lg-3 {
-            &:nth-child(odd) {
-                .milestone-item {
-                    transform: translateY(25px);
-                }
-
-                .card {
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: -10px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 0;
-                        height: 0;
-                        border-left: 10px solid rgba(0, 0, 0, 0);
-                        border-right: 10px solid rgba(0, 0, 0, 0);
-                        border-bottom: 10px solid #e6f0ec;
-                    }
-                }
-            }
-
-            &:nth-child(even) {
-                .milestone-item {
-                    transform: translateY(-75px);
-                }
-
-                .card {
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        bottom: -10px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 0;
-                        height: 0;
-                        border-left: 10px solid rgba(0, 0, 0, 0);
-                        border-right: 10px solid rgba(0, 0, 0, 0);
-                        border-top: 10px solid #e6f0ec;
-                    }
-                }
-            }
-        }
-    }
-
-    @media (max-width: 767.98px) {
-        .row {
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                width: 0;
-                height: 100%;
-                border-left: 2px dashed var(--color-primary);
-                opacity: .3;
-                z-index: -2;
-            }
-        }
-
-        .milestone-item {
-            background-color: var(--color-light-gray2);
-        }
-
-        .col-lg-3 {
-            .card {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: -10px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 0;
-                    height: 0;
-                    border-left: 10px solid transparent;
-                    border-right: 10px solid transparent;
-                    border-bottom: 10px solid #e6f0ec;
-                }
-            }
-        }
-    }
-}
 
 .map-info {
     height: 550px;
@@ -1775,6 +1651,29 @@ footer {
     width: 100%;
     height: 100%;
     transform: translate(10px, -10px);
+}
+
+/* ==== Specializations page ==== */
+.specialization-card  {
+    background: linear-gradient(270deg, rgba(67, 102, 161, 0.1) 0%, rgba(0, 141, 92, 0.1) 100%);
+    border: 0;
+    max-width: 100%;
+    .icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        border: 11px solid #E4EDEA;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -70px auto 0px;
+        img {
+            width: 54px;
+            height: 54px;
+            object-fit: contain;
+        }
+    }
 }
 
 /* ==== Rtl  ==== */
